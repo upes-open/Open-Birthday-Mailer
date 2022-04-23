@@ -1,6 +1,6 @@
 var nodemailer = require('nodemailer');
 const http = require('http') 
-const port = 3000
+const port = process.env.PORT || 3000
 const fs = require('fs')
 const cron = require('node-cron')
 const Data = require('./data.json');
@@ -13,13 +13,13 @@ let open_pass = process.env.OPEN_PASS;
 
 cron.schedule("00 00 1-31 1-12 *",function(){
   console.log('cron scheduled')
-  const server = http.createServer(function(req, res) {
+  const app = http.createServer(function(req, res) {
     res.writeHead(200, {'Content-Type': 'text/html'})
   },{
     timezone: "Asia/Kolkata"
   })
   
-  server.listen(port, function(error) {
+  app.listen(port, function(error) {
     if(error) {
         console.log("Something went wrong", error)
     } else {

@@ -3,5 +3,12 @@
     "dotenv": "^16.0.0",
     "node-cron": "^3.0.0",
     "nodemailer": "^6.7.3"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": "16.13.1",
+    "npm": "8.1.2"
   }
 }
