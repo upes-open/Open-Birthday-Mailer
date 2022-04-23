@@ -75,7 +75,8 @@ cron.schedule("00 00 1-31 1-12 *",function(){
       to: send_mail[i],
       subject: 'Happy Birthday!',
       text: 'Happy Birthday to you '+send_name+' !',
-      html: `<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+      html: `
+      <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
       <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
       <head>
       <!--[if gte mso 9]>
@@ -195,7 +196,7 @@ cron.schedule("00 00 1-31 1-12 *",function(){
         <tr>
           <td style="padding-right: 0px;padding-left: 0px;" align="center">
             
-            <img align="center" border="0" src="https://raw.githubusercontent.com/DivijChaudhari/Open-Birthday-Mailer/main/assets/images/image-1.jpeg" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 150px;" width="150"/>
+            <img align="center" border="0" src="https://upes-open.org/static/media/logo.173d96f05139ade1a7ca.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 150px;" width="150"/>
             
           </td>
         </tr>
@@ -229,7 +230,7 @@ cron.schedule("00 00 1-31 1-12 *",function(){
         <tr>
           <td style="padding-right: 0px;padding-left: 0px;" align="center">
             
-            <img align="center" border="0" src="https://github.com/DivijChaudhari/Open-Birthday-Mailer/blob/main/assets/images/image-2.jpeg" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 564px;" width="564"/>
+            <img align="center" border="0" src="https://raw.githubusercontent.com/DivijChaudhari/Open-Birthday-Mailer/main/assets/images/image-2.jpeg" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 564px;" width="564"/>
             
           </td>
         </tr>
@@ -240,19 +241,6 @@ cron.schedule("00 00 1-31 1-12 *",function(){
         </tbody>
       </table>
       
-      <table style="font-family:'Raleway',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-        <tbody>
-          <tr>
-            <td style="overflow-wrap:break-word;word-break:break-word;padding:15px 20px 14px;font-family:'Raleway',sans-serif;" align="left">
-              
-        <div style="color: #ffffff; line-height: 120%; text-align: center; word-wrap: break-word;">
-          <p style="font-size: 14px; line-height: 120%;"><span style="font-size: 30px; line-height: 36px;">We&rsquo;re going to help you celebrate.</span></p>
-        </div>
-      
-            </td>
-          </tr>
-        </tbody>
-      </table>
       
       <table style="font-family:'Raleway',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
         <tbody>
@@ -273,15 +261,6 @@ cron.schedule("00 00 1-31 1-12 *",function(){
         <tbody>
           <tr>
             <td style="overflow-wrap:break-word;word-break:break-word;padding:15px 20px 25px;font-family:'Raleway',sans-serif;" align="left">
-              
-      <div align="center">
-        <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;font-family:'Raleway',sans-serif;"><tr><td style="font-family:'Raleway',sans-serif;" align="center"><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="" style="height:54px; v-text-anchor:middle; width:187px;" arcsize="18.5%" strokecolor="#ffffff" strokeweight="2px" fillcolor="#3aaee0"><w:anchorlock/><center style="color:#FFF;font-family:'Raleway',sans-serif;"><![endif]-->
-          <a href="" target="_blank" style="box-sizing: border-box;display: inline-block;font-family:'Raleway',sans-serif;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFF; background-color: #3aaee0; border-radius: 10px;-webkit-border-radius: 10px; -moz-border-radius: 10px; width:auto; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;border-top-color: #ffffff; border-top-style: solid; border-top-width: 2px; border-left-color: #ffffff; border-left-style: solid; border-left-width: 2px; border-right-color: #ffffff; border-right-style: solid; border-right-width: 2px; border-bottom-color: #ffffff; border-bottom-style: solid; border-bottom-width: 2px;">
-            <span style="display:block;padding:13px 22px;line-height:120%;"><span style="font-size: 24px; line-height: 28.799999999999997px;">CLICK HERE!</span></span>
-          </a>
-        <!--[if mso]></center></v:roundrect></td></tr></table><![endif]-->
-      </div>
-      
             </td>
           </tr>
         </tbody>
@@ -382,6 +361,7 @@ cron.schedule("00 00 1-31 1-12 *",function(){
       </body>
       
       </html>
+      
       `
     };
   
