@@ -1,7 +1,6 @@
 import './balloons.css';
-const bdayBallons = (function(){
+(function bdayBallons(){
     const density = 5; // concurrent balloon count
-    const balloons = []; 
     const colors = ['yellow', 'green', 'blue', 'red', 'orange', 'purple', 'pink'];
 
     const stringElement = document.createElement("div");
