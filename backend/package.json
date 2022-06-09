@@ -9,7 +9,7 @@
   },
   "name": "upes-open-birthday-mailer",
   "version": "1.0.0",
-  "description": "Sends mail on birthdays",
+  "description": "Sends mails",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
