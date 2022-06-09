@@ -1,8 +1,7 @@
-var nodemailer = require('nodemailer');
-const http = require('http') 
+var nodemailer = require('nodemailer')
+const http = require('http')
 const port = 3000
-const fs = require('fs')
-const cron = require('node-cron')
+const cron = require('node-cron');
 const Data = require('./data.json');
 const { setInterval } = require('timers/promises');
 const internal = require('stream');
@@ -10,6 +9,9 @@ require('dotenv').config();
 
 let open_mail = process.env.OPEN_MAIL;
 let open_pass = process.env.OPEN_PASS;
+let client_id = process.env.OAUTH_CLIENTID;
+let client_secret = process.env.OAUTH_CLIENTSECRET;
+let refresh_token = process.env.OAUTH_REFRESH_TOKEN;
 
 cron.schedule("00 00 1-31 1-12 *",function(){
   console.log('cron scheduled')
@@ -32,7 +34,6 @@ cron.schedule("00 00 1-31 1-12 *",function(){
   var mail = Data[2];
   
   var d0 = new Date();
-  console.log(d0)
   d0 = [d0.getMonth(),d0.getDate()];
   
   var count = 0;
@@ -40,7 +41,6 @@ cron.schedule("00 00 1-31 1-12 *",function(){
   var pos = [];
   for (let d of date){
     d = new Date(d);
-    console.log(d)
     d = [d.getMonth(), d.getDate()];
     if (JSON.stringify(d)==JSON.stringify(d0)){
       pos[count]=i;
@@ -64,8 +64,12 @@ cron.schedule("00 00 1-31 1-12 *",function(){
   var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
+      type : 'OAuth2',
       user: open_mail,
-      pass: open_pass
+      pass: open_pass,
+      clientId: client_id,
+      clientSecret: client_secret,
+      refreshToken: refresh_token
     }
   });
   
@@ -196,7 +200,7 @@ cron.schedule("00 00 1-31 1-12 *",function(){
         <tr>
           <td style="padding-right: 0px;padding-left: 0px;" align="center">
             
-            <img align="center" border="0" src="https://upes-open.org/static/media/logo.173d96f05139ade1a7ca.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 150px;" width="150"/>
+            <img align="center" border="0" src="https://upes-open.org/static/media/logo.173d96f0.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 150px;" width="150"/>
             
           </td>
         </tr>

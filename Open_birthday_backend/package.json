@@ -2,5 +2,18 @@
   "dependencies": {
     "dotenv": "^16.0.0",
     "nodemailer": "^6.7.3"
+  },
+  "name": "upes-open-birthday-mailer",
+  "version": "1.0.0",
+  "description": "Send birthday messages",
+  "main": "Birthday_mailer.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "Birthday_mailer.js"
+  },
+  "author": "Manan Gupta",
+  "license": "GPL-3.0-only",
+  "engines": {
+    "node": "16.14.2"
   }
 }
