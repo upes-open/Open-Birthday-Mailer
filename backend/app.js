@@ -1,7 +1,7 @@
 var nodemailer = require('nodemailer')
 const http = require('http')
 const port = 3000
-const cron = require('node-cron');
+//const cron = require('node-cron');
 const Data = require('./data.json');
 const { setInterval } = require('timers/promises');
 const internal = require('stream');
@@ -12,22 +12,7 @@ let open_pass = process.env.OPEN_PASS;
 let client_id = process.env.OAUTH_CLIENTID;
 let client_secret = process.env.OAUTH_CLIENTSECRET;
 let refresh_token = process.env.OAUTH_REFRESH_TOKEN;
-
-cron.schedule("00 00 1-31 1-12 *",function(){
-  console.log('cron scheduled')
-  const server = http.createServer(function(req, res) {
-    res.writeHead(200, {'Content-Type': 'text/html'})
-  },{
-    timezone: "Asia/Kolkata"
-  })
   
-  server.listen(port, function(error) {
-    if(error) {
-        console.log("Something went wrong", error)
-    } else {
-        console.log("Server is listening on port " + port)
-    }
-  })
   
   var name = Data[0];
   var date = Data[1];
@@ -377,4 +362,3 @@ cron.schedule("00 00 1-31 1-12 *",function(){
       }
     })
   }
-})
